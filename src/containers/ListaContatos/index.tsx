@@ -1,14 +1,20 @@
+import BotaoAdicionar from '../../components/BotaoAdicionar'
 import Contato from '../../components/Contato'
+
+import { Header, Lista } from './styles'
 
 const ListaContato = () => {
   return (
     <>
-      <h1>Contatos</h1>
-      <ul>
+      <Header>
+        <h1>Contatos</h1>
+        <BotaoAdicionar />
+      </Header>
+      <Lista>
         <li>
           <Contato />
         </li>
-      </ul>
+      </Lista>
     </>
   )
 }
