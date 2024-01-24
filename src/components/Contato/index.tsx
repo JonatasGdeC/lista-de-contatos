@@ -44,8 +44,9 @@ const ContatoCard = ({
     <S.Card>
       <div>
         <S.Dados>
-          <label htmlFor="">Nome:</label>
+          <label htmlFor="nome">Nome:</label>
           <input
+            id="nome"
             type="text"
             value={nome}
             disabled={!editando}
@@ -53,8 +54,9 @@ const ContatoCard = ({
           />
         </S.Dados>
         <S.Dados>
-          <label htmlFor="">E-mail:</label>
+          <label htmlFor="email">E-mail:</label>
           <input
+            id="email"
             type="email"
             value={email}
             disabled={!editando}
@@ -62,8 +64,9 @@ const ContatoCard = ({
           />
         </S.Dados>
         <S.Dados>
-          <label htmlFor="">Telefone:</label>
+          <label htmlFor="telefone">Telefone:</label>
           <input
+            id="telefone"
             type="tel"
             value={telefone}
             disabled={!editando}

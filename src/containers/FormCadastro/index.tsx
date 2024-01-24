@@ -16,14 +16,22 @@ const FormCadastro = () => {
 
   const cadastrarContato = (e: FormEvent) => {
     e.preventDefault()
-    dispatch(
-      cadastrar({
-        nome,
-        email,
-        telefone
-      })
-    )
-    navigate('/')
+    if ((nome && email && telefone) === '') {
+      alert('Preencha todos os campos corretamente!')
+    } else if (nome.length < 3) {
+      alert('Digite um nome acima de 3 caracteres!')
+    } else if (telefone.length < 8) {
+      alert('Digite um número de telefone!')
+    } else {
+      dispatch(
+        cadastrar({
+          nome,
+          email,
+          telefone
+        })
+      )
+      navigate('/')
+    }
   }
 
   return (
@@ -54,7 +62,7 @@ const FormCadastro = () => {
         <div>
           <label htmlFor="telefone">Telefone:</label>
           <input
-            type="tel"
+            type="number"
             id="telefone"
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}

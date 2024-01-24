@@ -16,6 +16,11 @@ export const Container = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 0 32px;
+  }
 `
 
 export const Header = styled.div`
@@ -27,6 +32,13 @@ export const Header = styled.div`
   z-index: 0;
   background-color: #fff;
   padding: 16px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 6px;
+  }
 `
 export const Botao = styled.button`
   padding: 8px;

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const Form = styled.form`
-  border: 1px solid #000;
-  padding: 12px;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 
   div {
     display: flex;
@@ -12,6 +13,7 @@ export const Form = styled.form`
     label {
       font-weight: bold;
       cursor: pointer;
+      margin-bottom: 6px;
     }
 
     input {
@@ -23,6 +25,12 @@ export const Form = styled.form`
 
       &:focus {
         outline: none;
+      }
+
+      &[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
     }
   }
