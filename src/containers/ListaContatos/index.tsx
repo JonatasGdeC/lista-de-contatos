@@ -1,10 +1,14 @@
+import { useSelector } from 'react-redux'
 import BotaoAdicionar from '../../components/BotaoAdicionar'
 import ContatoCard from '../../components/Contato'
 
 import { Header } from '../../styles'
 import { Lista } from './styles'
+import { RootReducer } from '../../store'
 
 const ListaContato = () => {
+  const { itens } = useSelector((state: RootReducer) => state.contato)
+
   return (
     <>
       <Header>
@@ -12,9 +16,16 @@ const ListaContato = () => {
         <BotaoAdicionar />
       </Header>
       <Lista>
-        <li>
-          <ContatoCard nome={''} email={''} telefone={''} id={0} />
-        </li>
+        {itens.map((c) => (
+          <li key={c.id}>
+            <ContatoCard
+              nome={c.nome}
+              email={c.email}
+              telefone={c.telefone}
+              id={c.id}
+            />
+          </li>
+        ))}
       </Lista>
     </>
   )

@@ -1,9 +1,11 @@
+import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import EstiloGlobal, { Container } from './styles'
+import { store } from './store'
 
 import ListaContato from './containers/ListaContatos'
 import FormCadastro from './containers/FormCadastro'
+import EstiloGlobal, { Container } from './styles'
 
 export type Contato = {
   nome: string
@@ -25,10 +27,12 @@ const rotas = createBrowserRouter([
 
 function App() {
   return (
-    <Container>
-      <EstiloGlobal />
-      <RouterProvider router={rotas} />
-    </Container>
+    <Provider store={store}>
+      <Container>
+        <EstiloGlobal />
+        <RouterProvider router={rotas} />
+      </Container>
+    </Provider>
   )
 }
 

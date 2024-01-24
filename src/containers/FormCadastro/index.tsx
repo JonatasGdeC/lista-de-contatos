@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 import { cadastrar } from '../../store/reducers/contato'
 
@@ -8,6 +9,7 @@ import { Form } from './styles'
 
 const FormCadastro = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -21,6 +23,7 @@ const FormCadastro = () => {
         telefone
       })
     )
+    navigate('/')
   }
 
   return (
