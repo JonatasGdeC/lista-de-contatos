@@ -14,27 +14,3 @@ export const Card = styled.div`
     gap: 8px;
   }
 `
-export const Buttons = styled.div`
-  button {
-    padding: 8px;
-    font-size: 8px;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all ease 0.3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:first-child {
-      background-color: green;
-    }
-
-    &:nth-child(2) {
-      background-color: red;
-    }
-  }
-`

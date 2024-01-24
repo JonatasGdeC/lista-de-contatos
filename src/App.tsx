@@ -1,12 +1,26 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import EstiloGlobal, { Container } from './styles'
 
 import ListaContato from './containers/ListaContatos'
+import FormCadastro from './containers/FormCadastro'
+
+const rotas = createBrowserRouter([
+  {
+    path: '/',
+    element: <ListaContato />
+  },
+  {
+    path: '/cadastro',
+    element: <FormCadastro />
+  }
+])
 
 function App() {
   return (
     <Container>
       <EstiloGlobal />
-      <ListaContato />
+      <RouterProvider router={rotas} />
     </Container>
   )
 }

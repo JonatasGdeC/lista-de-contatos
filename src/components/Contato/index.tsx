@@ -1,18 +1,19 @@
-import * as S from './styles'
+import { BotaoEditarSalvarCadastrar, BotaoExcluirCancelar } from '../../styles'
+import { Card } from './styles'
 
 const Contato = () => {
   return (
-    <S.Card>
+    <Card>
       <div>
         <p>Nome:</p>
         <p>E-mail:</p>
         <p>Telefone:</p>
       </div>
-      <S.Buttons>
-        <button>Editar</button>
-        <button>Remover</button>
-      </S.Buttons>
-    </S.Card>
+      <div>
+        <BotaoEditarSalvarCadastrar>Editar</BotaoEditarSalvarCadastrar>
+        <BotaoExcluirCancelar>Remover</BotaoExcluirCancelar>
+      </div>
+    </Card>
   )
 }
 

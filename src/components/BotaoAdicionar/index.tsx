@@ -1,7 +1,7 @@
-import { ButtonSave } from './styles'
+import { ButtonRotas } from '../../styles'
 
 const BotaoAdicionar = () => {
-  return <ButtonSave>Novo Contato</ButtonSave>
+  return <ButtonRotas to="/cadastro">Novo Contato</ButtonRotas>
 }
 
 export default BotaoAdicionar
