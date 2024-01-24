@@ -7,10 +7,17 @@ export const Card = styled.div`
   padding: 16px;
   border: 1px solid #000;
   border-radius: 16px;
+`
 
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+export const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+
+export const Dados = styled.div`
+  label {
+    font-weight: bold;
+    margin-right: 10px;
   }
 `

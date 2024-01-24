@@ -5,6 +5,13 @@ import EstiloGlobal, { Container } from './styles'
 import ListaContato from './containers/ListaContatos'
 import FormCadastro from './containers/FormCadastro'
 
+export type Contato = {
+  nome: string
+  email: string
+  telefone: string
+  id: number
+}
+
 const rotas = createBrowserRouter([
   {
     path: '/',

@@ -1,5 +1,5 @@
 import BotaoAdicionar from '../../components/BotaoAdicionar'
-import Contato from '../../components/Contato'
+import ContatoCard from '../../components/Contato'
 
 import { Header } from '../../styles'
 import { Lista } from './styles'
@@ -13,7 +13,7 @@ const ListaContato = () => {
       </Header>
       <Lista>
         <li>
-          <Contato />
+          <ContatoCard nome={''} email={''} telefone={''} id={0} />
         </li>
       </Lista>
     </>
