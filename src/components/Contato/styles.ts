@@ -20,4 +20,8 @@ export const Dados = styled.div`
     font-weight: bold;
     margin-right: 10px;
   }
+
+  input {
+    border: none;
+  }
 `

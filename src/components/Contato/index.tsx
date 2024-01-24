@@ -1,10 +1,14 @@
+import { useDispatch } from 'react-redux'
 import { Contato } from '../../App'
 import { BotaoEditarSalvarCadastrar, BotaoExcluirCancelar } from '../../styles'
 import * as S from './styles'
+import { remover } from '../../store/reducers/contato'
 
 type Props = Contato
 
-const ContatoCard = ({ nome, email, telefone }: Props) => {
+const ContatoCard = ({ nome, email, telefone, id }: Props) => {
+  const dispatch = useDispatch()
+
   return (
     <S.Card>
       <div>
@@ -23,7 +27,9 @@ const ContatoCard = ({ nome, email, telefone }: Props) => {
       </div>
       <S.Buttons>
         <BotaoEditarSalvarCadastrar>Editar</BotaoEditarSalvarCadastrar>
-        <BotaoExcluirCancelar>Remover</BotaoExcluirCancelar>
+        <BotaoExcluirCancelar onClick={() => dispatch(remover(id))}>
+          Remover
+        </BotaoExcluirCancelar>
       </S.Buttons>
     </S.Card>
   )
