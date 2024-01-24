@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Form = styled.form`
   border-radius: 8px;
@@ -21,7 +22,7 @@ export const Form = styled.form`
       font-size: 16px;
       border: none;
       border-radius: 8px;
-      background-color: #e3e3ff;
+      background-color: ${variaveis.azul2};
 
       &:focus {
         outline: none;

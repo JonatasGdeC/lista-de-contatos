@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Card = styled.div`
   display: flex;
@@ -53,7 +54,7 @@ export const Dados = styled.div`
 
     &:focus {
       outline: none;
-      border: 1px solid #000;
+      border: 1px solid ${variaveis.preto};
     }
 
     @media (max-width: 768px) {

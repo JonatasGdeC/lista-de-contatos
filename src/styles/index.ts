@@ -1,6 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import { Link } from 'react-router-dom'
 
+import variaveis from './variaveis'
+
 const EstiloGlobal = createGlobalStyle`
   *{
     margin: 0;
@@ -30,7 +32,7 @@ export const Header = styled.div`
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: #fff;
+  background-color: ${variaveis.branco};
   padding: 16px;
 
   @media (max-width: 1024px) {
@@ -44,7 +46,7 @@ export const Botao = styled.button`
   padding: 8px;
   font-size: 8px;
   font-weight: bold;
-  color: #fff;
+  color: ${variaveis.branco};
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -55,19 +57,19 @@ export const Botao = styled.button`
   }
 `
 export const BotaoEditarSalvarCadastrar = styled(Botao)`
-  background-color: green;
+  background-color: ${variaveis.verde};
 `
 
 export const BotaoExcluirCancelar = styled(Botao)`
-  background-color: red;
+  background-color: ${variaveis.vermelho};
 `
 
 export const ButtonRotas = styled(Link)`
   padding: 8px;
   font-size: 16px;
   font-weight: bold;
-  background-color: blue;
-  color: #fff;
+  background-color: ${variaveis.azul};
+  color: ${variaveis.branco};
   border: none;
   border-radius: 8px;
   cursor: pointer;
