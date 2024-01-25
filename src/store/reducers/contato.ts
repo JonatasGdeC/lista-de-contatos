@@ -16,12 +16,14 @@ const contatoSlice = createSlice({
     cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
       const contatoJaExiste = state.itens.find(
         (contato) =>
-          contato.nome.toLocaleLowerCase() ===
-          action.payload.nome.toLocaleLowerCase()
+          contato.email.toLocaleLowerCase() ===
+            action.payload.email.toLocaleLowerCase() ||
+          contato.telefone.toLocaleLowerCase() ===
+            action.payload.telefone.toLocaleLowerCase()
       )
 
       if (contatoJaExiste) {
-        alert('Já existe um contato com esse nome')
+        alert('Já existe um contato com esse email/telefone!')
       } else {
         const ultimoContato = state.itens[state.itens.length - 1]
 
