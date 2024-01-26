@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { IMaskInput } from 'react-imask'
 
 import { cadastrar } from '../../store/reducers/contato'
 
@@ -61,11 +62,14 @@ const FormCadastro = () => {
         </div>
         <div>
           <label htmlFor="telefone">Telefone:</label>
-          <input
-            type="number"
+          <IMaskInput
+            mask="(00) 00000-0000"
+            type="text"
             id="telefone"
             value={telefone}
-            onChange={(e) => setTelefone(e.target.value)}
+            onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setTelefone(e.target.value)
+            }
           />
         </div>
         <BotaoEditarSalvarCadastrar type="submit">
