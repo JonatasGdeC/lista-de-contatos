@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
+import { IMaskInput } from 'react-imask'
 
 import { Contato } from '../../App'
 import { BotaoEditarSalvarCadastrar, BotaoExcluirCancelar } from '../../styles'
@@ -65,12 +66,15 @@ const ContatoCard = ({
         </S.Dados>
         <S.Dados>
           <label htmlFor="telefone">Telefone:</label>
-          <input
+          <IMaskInput
+            mask="(00) 00000-0000"
             id="telefone"
             type="tel"
             value={telefone}
             disabled={!editando}
-            onChange={(e) => setTelefone(e.target.value)}
+            onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setTelefone(e.target.value)
+            }
           />
         </S.Dados>
       </div>
